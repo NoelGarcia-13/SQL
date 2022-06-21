@@ -1,0 +1,26 @@
+-Create a bakery database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, type TEXT, price INTEGER, quantity INTEGER, popularity INTEGER);
+
+INSERT INTO store VALUES (1, "Chocolate Chip", "Cookie", 1.50, 12, 70);
+INSERT INTO store VALUES (2, "Peanut Butter", "Cookie", 1.50, 12, 60);
+INSERT INTO store VALUES (3, "Strawberry", "Cookie", 2.00, 24, 100);
+INSERT INTO store VALUES (4, "Funfetti", "Cookie", 2.00, 24, 90);
+INSERT INTO store VALUES (5, "Red Velvet Oreo", "Cookie", 2.00, 24, 80);
+INSERT INTO store VALUES (6, "Cinnamon Toast Crunch", "Cookie", 2.00, 24, 85);
+INSERT INTO store VALUES (7., "Reeses Pieces", "Cookie", 2.00, 24, 75);
+INSERT INTO store VALUES (8, "Tres Leches", "Cake", 4.00, 8, 75);
+INSERT INTO store VALUES (9, "Pinneaple", "Cake", 4.00, 8, 70);
+INSERT INTO store VALUES (10, "Carrot", "Cake", 4.00, 8, 75);
+INSERT INTO store VALUES (11, "Triple Chocolate", "Cake", 4.00, 8, 55);
+INSERT INTO store VALUES (12, "Cheesecake", "Cake", 4.00, 8, 55);
+INSERT INTO store VALUES (13, "Lemon", "Cupcake", 2.50, 30, 60);
+INSERT INTO store VALUES (14, "Blueberry", "Cupcake", 2.50, 30, 78);
+INSERT INTO store VALUES (15, "Raspberry","Cupcake", 2.50, 30, 88);
+
+-Displaying the database ordered by price
+SELECT*FROM store
+ORDER BY price;
+
+-What are the most 5 popular items?
+SELECT item, type, price, popularity FROM store ORDER BY popularity desc LIMIT 5;
